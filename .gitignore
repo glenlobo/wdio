@@ -1,0 +1,10 @@
+# Ignore all folders named "node_modules" at any level
+node_modules/
+
+# Ignore a specific folder 
+/allure-report/
+/allure-results/
+
+
+# Ignore a specific nested folder path
+# /src/temp/
