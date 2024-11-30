@@ -8,3 +8,6 @@ node_modules/
 
 # Ignore a specific nested folder path
 # /src/temp/
+
+# Ignore a specific file
+.vscode/launch.json
