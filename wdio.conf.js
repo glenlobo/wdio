@@ -63,18 +63,33 @@ export const config = {
     //
     capabilities: [{
         // Chrome capabilities
+        maxInstances: 10,
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
+            excludeSwitches: ['enable-automation'],
             args: [
+                // '--headless',
                 // '--disable-web-security',
                 // '--allow-file-access-from-files',
                 // '--allow-file-access',
                 '--disable-infobars',
                 '--ignore-certificate-errors',
                 '--disable-gpu',
+                '--no-sandbox',
                 '--window-size=1024x768',
-            ], excludeSwitches: ['enable-automation'],
+            ],
+            prefs: {
+                profile: {
+                    default_content_setting_values: { cookies: 1 }, //allow all cookies
+                    block_third_party_cookies: false,
+                },
+                network: {
+                    cookies: {
+                        cookieBehavior: 0, //allow all cookies
+                    }
+                }
+            }
             // ].concat(headless ? ['--headless'] : [])
         }
     },
