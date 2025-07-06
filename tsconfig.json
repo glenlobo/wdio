@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "types": [
+            "node",
+            "@wdio/types",
+            "@wdio/globals",
+            "@wdio/mocha-framework"
+        ],
+        "target": "es2022",
+        "module": "es2022",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "baseUrl": "./",
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "allowJs": true,
+        "checkJs": true,
+        "paths": {
+            "*": [
+                "./node_modules/*"
+            ],
+            "@pagesDealer/*": [
+                "./tests/pages/dealer/*"
+            ],
+            "@pagesEui/*": [
+                "./tests/pages/eui/*"
+            ],
+            "@pages/*": [
+                "./tests/pages/*"
+            ],
+            "@data/*": [
+                "./tests/data/*"
+            ],
+            "@utils/*": [
+                "./utils/*"
+            ],
+            "@/*": [
+                "./*"
+            ]
+        }
+    },
+    "include": [
+        "**/*.mjs",
+        "**/*.js",
+        "**/*.json",
+        "node_modules/@wdio/mocha-framework",
+        "node_modules/@wdio/types",
+        "node_modules/@wdio/globals"
+    ]
+}

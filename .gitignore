@@ -2,8 +2,7 @@
 node_modules/
 
 # Ignore a specific folder 
-/allure-report/
-/allure-results/
+reports
 
 
 # Ignore a specific nested folder path
